@@ -25,6 +25,7 @@ def add(name=None):
             f.write('0')
     except:
         error("Unable To Create Data Holder")
+        
 # Adds things into the file
 def addContents(name,contents):
     if CheckIfValid(name) == True:
@@ -47,6 +48,8 @@ def clearData(name):
         with open(f'data/{name}.txt', 'r+') as file:
             file.truncate(0)
             
-
+# finds the average number of a list
+def finAv(lis):
+    return sum(lis) / len(lis)
 
 
